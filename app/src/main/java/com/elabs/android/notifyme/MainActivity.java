@@ -68,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Opens the TimePicker Dailog and sets the chosen date to the dateView textview
+     *@param hours the initial hours to be display in the timePicker
+     *@param minutes the initial month to be display in the timePicker
+     */
+
     public void showTime(int hours, int minutes)
     {
 
