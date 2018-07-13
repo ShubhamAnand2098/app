@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView dateView, timeView, shubham;
+    TextView dateView, timeView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
