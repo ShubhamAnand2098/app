@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView dateView, timeView, d;
+    TextView dateView, timeView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         hours= time.getHours();
         minutes = time.getMinutes();
 
-        //Button button = (Button)findViewById(R.id.button);
         dateView = (TextView)findViewById(R.id.date_view);
         timeView = (TextView)findViewById(R.id.time_view);
         showDate(year, month, date);
@@ -68,15 +67,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * Opens the TimePicker Dailog and sets the chosen date to the dateView textview
-     *@param hours the initial hours to be display in the timePicker
-     *@param minutes the initial month to be display in the timePicker
-     */
-
     public void showTime(int hours, int minutes)
     {
-
         TimePickerDialog.OnTimeSetListener timeChangedListener = new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -84,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         final TimePickerDialog timePickerDialog = new TimePickerDialog(this, timeChangedListener,hours, minutes, true );
-
         timeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
